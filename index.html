@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ginni Falak — Software Developer</title>
+<meta name="description" content="Portfolio of Ginni Falak, a frontend-focused software developer working across React, JavaScript, SQL/MongoDB, and web troubleshooting.">
+
+<!-- Google Fonts: JetBrains Mono for code-flavoured headings, Inter for body copy -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ TOP NAV — styled like editor tabs, one "file" per section ============ -->
+<header class="tabbar" id="tabbar">
+  <div class="tabbar__brand">
+    <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+    <span class="brand-name">ginni-falak ~ portfolio</span>
+  </div>
+
+  <nav class="tabbar__tabs" id="navTabs">
+    <a href="#home" class="tab is-active" data-tab>
+      <span class="tab__icon" style="color:#e8e6e1">◆</span>home.html
+    </a>
+    <a href="#about" class="tab" data-tab>
+      <span class="tab__icon" style="color:#f1e05a">●</span>about.js
+    </a>
+    <a href="#skills" class="tab" data-tab>
+      <span class="tab__icon" style="color:#61DAFB">●</span>skills.js
+    </a>
+    <a href="#projects" class="tab" data-tab>
+      <span class="tab__icon" style="color:#D97A9C">●</span>projects.sql
+    </a>
+    <a href="#timeline" class="tab" data-tab>
+      <span class="tab__icon" style="color:#9aa4b2">●</span>timeline.log
+    </a>
+    <a href="#contact" class="tab" data-tab>
+      <span class="tab__icon" style="color:#6FBF9E">●</span>contact.sh
+    </a>
+  </nav>
+
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Mobile nav drawer -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#home" data-tab>home.html</a>
+  <a href="#about" data-tab>about.js</a>
+  <a href="#skills" data-tab>skills.js</a>
+  <a href="#projects" data-tab>projects.sql</a>
+  <a href="#timeline" data-tab>timeline.log</a>
+  <a href="#contact" data-tab>contact.sh</a>
+</nav>
+
+<!-- The animated git-graph spine that runs down the whole page (drawn behind content) -->
+<svg class="graph-spine" id="graphSpine" viewBox="0 0 100 4000" preserveAspectRatio="none" aria-hidden="true">
+  <path id="mainLine" class="graph-line graph-line--main" d="" />
+  <path id="feBranch" class="graph-line graph-line--fe" d="" />
+  <path id="beBranch" class="graph-line graph-line--be" d="" />
+  <path id="dbBranch" class="graph-line graph-line--db" d="" />
+</svg>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section id="home" class="hero">
+    <div class="hero__terminal">
+      <div class="term-bar">
+        <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+        <span class="term-bar__title">zsh — 80×24</span>
+      </div>
+      <div class="term-body">
+        <p class="term-line"><span class="prompt">ginni@dev</span><span class="path">~</span><span class="dollar">$</span> <span id="typedCmd"></span><span class="cursor" id="cmdCursor">▍</span></p>
+        <div id="typedOutput" class="term-output"></div>
+      </div>
+    </div>
+
+    <h1 class="hero__name">Ginni Falak</h1>
+    <p class="hero__role">Software Developer <span class="hero__role-sep">·</span> full-stack in <code>progress</code></p>
+    <p class="hero__blurb">
+      I build interfaces with React and JavaScript, work with SQL and MongoDB on the data side,
+      and spend my day job helping candidates prepare technical projects and interviews for
+      the U.S. tech market. This page is a git graph — scroll to watch the branches merge.
+    </p>
+
+    <div class="hero__cta">
+      <a href="#projects" class="btn btn--primary">git log --projects</a>
+      <a href="#contact" class="btn btn--ghost">git push origin main</a>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to next section">
+      <span>scroll</span>
+      <svg width="14" height="20" viewBox="0 0 14 20" fill="none"><path d="M7 1v17M1 12l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT — first commit ============ -->
+  <section id="about" class="section commit-block" data-node data-branch="main">
+    <div class="commit-marker">
+      <span class="node node--main"></span>
+    </div>
+    <div class="commit-content">
+      <p class="eyebrow">about.js</p>
+      <div class="commit-msg">
+        <span class="hash">a1b2c3d</span>
+        <span class="msg">Initial commit: who I am</span>
+      </div>
+
+      <div class="about-header">
+        <div class="about-photo-wrap">
+          <img class="about-photo" src="ginni-falak.jpg" alt="Portrait of Ginni Falak">
+          <p class="about-photo-tag">// author.jpg</p>
+        </div>
+        <h2 class="section-title about-header__title">Hi, I'm Ginni.<br>I turn tickets, projects, and pull requests into results.</h2>
+      </div>
+
+      <div class="about-grid">
+        <p class="about-text">
+          I'm currently a Junior Software Developer (Tech Support) at Vizva Consultancy Services,
+          where I help candidates build ATS-ready resumes, guide them through hands-on technical
+          projects, and run mock interviews for people targeting U.S. tech roles. It's given me a
+          strong sense of what "job-ready" code and communication actually look like — I hold my
+          own work to the same standard.
+        </p>
+        <p class="about-text">
+          On the build side, I work with HTML, CSS, JavaScript, React and Redux day to day, reach
+          for SQL or MongoDB when data needs a home, and I'm comfortable in the debugging,
+          networking, and troubleshooting side of web apps too. I'm actively growing further into
+          full-stack development, one project and one pull request at a time.
+        </p>
+      </div>
+
+      <ul class="about-facts">
+        <li><span class="about-facts__k">Based in</span><span class="about-facts__v">Gurugram, Haryana</span></li>
+        <li><span class="about-facts__k">Focus</span><span class="about-facts__v">React/JS frontend · SQL & MongoDB · Web troubleshooting</span></li>
+        <li><span class="about-facts__k">Currently</span><span class="about-facts__v">Junior Software Developer (Tech Support) @ Vizva Consultancy Services</span></li>
+        <li><span class="about-facts__k">Status</span><span class="about-facts__v"><span class="live-dot"></span>Actively shipping</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS — three branches diverge ============ -->
+  <section id="skills" class="section skills-section">
+    <p class="eyebrow eyebrow--center">skills.js</p>
+    <h2 class="section-title section-title--center">Three branches, one developer</h2>
+    <p class="section-sub--center">
+      Everything I know, organised the way I actually think about it —
+      as parallel branches that eventually merge into whatever I'm shipping.
+    </p>
+
+    <div class="branches">
+
+      <!-- FRONTEND BRANCH -->
+      <div class="branch" data-node data-branch="fe">
+        <div class="branch__head">
+          <span class="branch__dot branch__dot--fe"></span>
+          <h3>frontend</h3>
+          <span class="branch__tag">React · JS · CSS</span>
+        </div>
+        <ul class="branch__commits">
+          <li class="commit">
+            <span class="commit__hash">f01a</span>
+            <div class="commit__body">
+              <p class="commit__title">HTML5, CSS3 &amp; Tailwind/Bootstrap</p>
+              <p class="commit__note">Semantic markup and responsive layout — the fundamentals I don't skip.</p>
+              <div class="bar"><span class="bar__label">comfortable</span><span class="bar__fill bar__fill--4"></span></div>
+            </div>
+          </li>
+          <li class="commit">
+            <span class="commit__hash">f02b</span>
+            <div class="commit__body">
+              <p class="commit__title">JavaScript &amp; TypeScript (basic)</p>
+              <p class="commit__note">DOM, async/await, and enough TypeScript to read and extend typed code.</p>
+              <div class="bar"><span class="bar__label">comfortable</span><span class="bar__fill bar__fill--4"></span></div>
+            </div>
+          </li>
+          <li class="commit">
+            <span class="commit__hash">f03c</span>
+            <div class="commit__body">
+              <p class="commit__title">React.js &amp; Redux Toolkit</p>
+              <p class="commit__note">Hooks, component design, and app-level state — used across every real project below.</p>
+              <div class="bar"><span class="bar__label">comfortable</span><span class="bar__fill bar__fill--4"></span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- BACKEND & TOOLS BRANCH -->
+      <div class="branch" data-node data-branch="be">
+        <div class="branch__head">
+          <span class="branch__dot branch__dot--be"></span>
+          <h3>backend &amp; tools</h3>
+          <span class="branch__tag">Node · Git · CI/CD</span>
+        </div>
+        <ul class="branch__commits">
+          <li class="commit">
+            <span class="commit__hash">b01a</span>
+            <div class="commit__body">
+              <p class="commit__title">Node.js &amp; Express</p>
+              <p class="commit__note">CRUD endpoints and demo APIs behind React frontends.</p>
+              <div class="bar"><span class="bar__label">learning</span><span class="bar__fill bar__fill--3"></span></div>
+            </div>
+          </li>
+          <li class="commit">
+            <span class="commit__hash">b02b</span>
+            <div class="commit__body">
+              <p class="commit__title">Git, GitHub &amp; GitHub Actions</p>
+              <p class="commit__note">Version control day-to-day, plus CI pipelines with Docker for reproducible builds.</p>
+              <div class="bar"><span class="bar__label">comfortable</span><span class="bar__fill bar__fill--4"></span></div>
+            </div>
+          </li>
+          <li class="commit">
+            <span class="commit__hash">b03c</span>
+            <div class="commit__body">
+              <p class="commit__title">Auth &amp; APIs (JWT, Firebase)</p>
+              <p class="commit__note">OTP login and JWT-secured sessions built for Raahi's real-time ride flows.</p>
+              <div class="bar"><span class="bar__label">learning</span><span class="bar__fill bar__fill--3"></span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- DATABASE & SUPPORT BRANCH -->
+      <div class="branch" data-node data-branch="db">
+        <div class="branch__head">
+          <span class="branch__dot branch__dot--db"></span>
+          <h3>database &amp; support</h3>
+          <span class="branch__tag">SQL · Mongo · Networking</span>
+        </div>
+        <ul class="branch__commits">
+          <li class="commit">
+            <span class="commit__hash">d01a</span>
+            <div class="commit__body">
+              <p class="commit__title">SQL &amp; data querying</p>
+              <p class="commit__note">Schema basics, joins, and querying/analysing stored data.</p>
+              <div class="bar"><span class="bar__label">comfortable</span><span class="bar__fill bar__fill--4"></span></div>
+            </div>
+          </li>
+          <li class="commit">
+            <span class="commit__hash">d02b</span>
+            <div class="commit__body">
+              <p class="commit__title">MongoDB</p>
+              <p class="commit__note">Document modelling for MERN-stack projects like Raahi.</p>
+              <div class="bar"><span class="bar__label">learning</span><span class="bar__fill bar__fill--3"></span></div>
+            </div>
+          </li>
+          <li class="commit">
+            <span class="commit__hash">d03c</span>
+            <div class="commit__body">
+              <p class="commit__title">Networking &amp; troubleshooting</p>
+              <p class="commit__note">TCP/IP and DNS fundamentals, root cause analysis, and daily issue diagnosis.</p>
+              <div class="bar"><span class="bar__label">comfortable</span><span class="bar__fill bar__fill--4"></span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS — feature commits ============ -->
+  <section id="projects" class="section commit-block" data-node data-branch="main">
+    <div class="commit-marker"><span class="node node--main"></span></div>
+    <div class="commit-content">
+      <p class="eyebrow">projects.sql</p>
+      <div class="commit-msg">
+        <span class="hash">p9f8e7d</span>
+        <span class="msg">Merge: feature branches into showcase</span>
+      </div>
+      <h2 class="section-title">Things I've actually shipped</h2>
+      <p class="section-sub">Real projects, pulled straight from the commit history — code links are placeholders until you drop your repo URLs in.</p>
+
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <div class="project-card__top">
+            <span class="pr-badge pr-badge--review">🟡 ongoing</span>
+            <span class="pr-badge pr-badge--num">#01</span>
+          </div>
+          <h3>Raahi — Ride-Sharing Web App</h3>
+          <p>Core MERN modules for a ride-sharing app: auth and ride workflows, OTP login and real-time ride status via Express + Firebase, JWT-secured sessions, Dockerized services, and GitHub Actions CI for a 3-member team.</p>
+          <ul class="tech-tags">
+            <li>React</li><li>Redux Toolkit</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>JWT</li><li>Firebase</li><li>Docker</li>
+          </ul>
+          <div class="project-card__links">
+            <a href="#" class="pc-link">View code →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__top">
+            <span class="pr-badge pr-badge--merged">🟢 shipped</span>
+            <span class="pr-badge pr-badge--num">#02</span>
+          </div>
+          <h3>Recipe Finder Web App</h3>
+          <p>An interactive recipe search platform built with React and public APIs — browse 500+ Indian dishes with filters for cuisine, ingredients, and cooking time, built from 6 reusable UI components for fast loading on low-bandwidth networks.</p>
+          <ul class="tech-tags">
+            <li>React</li><li>JavaScript</li><li>Public API</li><li>CSS</li>
+          </ul>
+          <div class="project-card__links">
+            <a href="#" class="pc-link">View code →</a>
+            <a href="#" class="pc-link">Live demo →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__top">
+            <span class="pr-badge pr-badge--draft">🔵 case study</span>
+            <span class="pr-badge pr-badge--num">#03</span>
+          </div>
+          <h3>Network Monitoring &amp; Log Analysis System</h3>
+          <p>A web-based system to monitor network activity and analyse logs — tracks IP requests, flags abnormal traffic patterns, and generates reports for troubleshooting and performance monitoring.</p>
+          <ul class="tech-tags">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>SQL</li>
+          </ul>
+          <div class="project-card__links">
+            <a href="#" class="pc-link">View code →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE — commit log ============ -->
+  <section id="timeline" class="section commit-block" data-node data-branch="main">
+    <div class="commit-marker"><span class="node node--main"></span></div>
+    <div class="commit-content">
+      <p class="eyebrow">timeline.log</p>
+      <h2 class="section-title">git log --author="Ginni"</h2>
+
+      <div class="log-table">
+        <div class="log-row log-row--head">
+          <span>hash</span><span>date</span><span>message</span>
+        </div>
+        <div class="log-row">
+          <span class="log-hash">e4f1a2c</span>
+          <span class="log-date">2025 —</span>
+          <span class="log-msg"><strong>Junior Software Developer (Tech Support)</strong> @ Vizva Consultancy Services — resume reviews, project guidance and mock interviews for 100+ candidates targeting U.S. tech roles.</span>
+        </div>
+        <div class="log-row">
+          <span class="log-hash">c7b8d91</span>
+          <span class="log-date">2024</span>
+          <span class="log-msg"><strong>Web Developer Intern</strong> @ Oasis Infobyte (Remote) — shipped a Temperature Converter, a Dynamic Landing Page, and a To-Do App with Node/Express endpoints, each ahead of schedule.</span>
+        </div>
+        <div class="log-row">
+          <span class="log-hash">a2e5f30</span>
+          <span class="log-date">2022–25</span>
+          <span class="log-msg"><strong>Bachelor of Computer Applications</strong> — Tula's Institute, 80%.</span>
+        </div>
+        <div class="log-row">
+          <span class="log-hash">1a0f2b3</span>
+          <span class="log-date">2021–22</span>
+          <span class="log-msg"><strong>Diploma in Computer Application</strong> — National Computer Centre, 84%.</span>
+        </div>
+        <div class="log-row">
+          <span class="log-hash">7c2d4e9</span>
+          <span class="log-date">certs</span>
+          <span class="log-msg"><strong>Certifications</strong> — Python for Data Science (NPTEL), JavaScript Algorithms &amp; Data Structures (freeCodeCamp), Cyber Security (RCPL).</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT — merge commit ============ -->
+  <section id="contact" class="section contact-section commit-block" data-node data-branch="merge">
+    <div class="commit-marker"><span class="node node--merge"></span></div>
+    <div class="commit-content">
+      <p class="eyebrow">contact.sh</p>
+      <h2 class="section-title">Merge: hire_me → main</h2>
+      <p class="section-sub">All three branches converge here. Let's ship something together.</p>
+
+      <div class="contact-grid">
+        <div class="contact-terminal">
+          <div class="term-bar">
+            <span class="dot dot--red"></span><span class="dot dot--yellow"></span><span class="dot dot--green"></span>
+            <span class="term-bar__title">contact.sh</span>
+          </div>
+          <div class="term-body">
+            <p class="term-line"><span class="prompt">ginni@dev</span><span class="path">~</span><span class="dollar">$</span> cat contact.sh</p>
+            <pre class="term-pre">--email     ginnifalak@gmail.com
+--phone     +91 70616 50216
+--location  Gurugram, Haryana
+--linkedin  [add your LinkedIn URL]
+--github    [add your GitHub URL]</pre>
+            <p class="term-line"><span class="prompt">ginni@dev</span><span class="path">~</span><span class="dollar">$</span> <span class="cursor">▍</span></p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <p class="contact-form__hint"># fill this in — wire it to Formspree, or your own Node/Express endpoint</p>
+          <label for="name">--name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+
+          <label for="email">--email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+          <label for="message">--message</label>
+          <textarea id="message" name="message" rows="4" placeholder="What are we building?" required></textarea>
+
+          <button type="submit" class="btn btn--primary btn--full">git push origin main</button>
+          <p class="contact-form__status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p><span class="hash">HEAD</span> → built with <code>&lt;3</code> and a lot of <code>console.log()</code> · © 2026 Ginni Falak</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
